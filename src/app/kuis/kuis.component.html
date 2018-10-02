@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+      <h2>Form Data Mahasiswa</h2>
+      <hr/>
+      <label for="nim">Nim</label>
+      <input type="text" class="form-control" [(ngModel)]="nim">
+      <label for="nama">Nama</label>
+      <input type="text" class="form-control" [(ngModel)]="nama">
+      <label for="kelas">Kelas</label>
+      <input type="text" class="form-control" [(ngModel)]="kelas">
+      <br/>
+      <button class="btn btn-block btn-primary" (click)="tambahKuis()">Tambah</button>
+      </div>
+      <div class="col-md-6">
+          <h2>Data Mahasiswa</h2>
+            <div class="card" *ngFor="let kuis of kuisCoba" style="margin-bottom: 30px">
+                <div class="card-header">
+                      <h2>{{ kuis.nama }}</h2>
+                   </div>
+                   <div class="card-body">
+                      <h2>{{ kuis.nim }}</h2>
+                      <h2>{{ kuis.kelas }}</h2>
+                   </div>
+            </div>
+    </div>
+    </div>
+  </div>
